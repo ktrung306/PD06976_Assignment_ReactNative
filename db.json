@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "name": "Cà phê Arabica",
+      "birthday": "30-06-2023",
+      "id": "1"
+    },
+    {
+      "name": "Cà phê Robusta",
+      "birthday": "26-04-2023",
+      "id": "2"
+    },
+    {
+      "id": "3231",
+      "name": "Cà phê Culi",
+      "birthday": "10-12-2023"
+    }
+  ]
+}

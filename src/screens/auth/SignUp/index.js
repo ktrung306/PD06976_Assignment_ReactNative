@@ -28,7 +28,9 @@ const SignUp =({navigation}) => {
                 <Checkbox checked={checked} onCheck={setChecked}></Checkbox>
                 <Text style={styles.checkText}>I agree with Terms & Privacy</Text>
             </View>
-            <Button style={styles.button}
+            <Button 
+            onPress={() => navigation.navigate('SignIn')}
+            style={styles.button}
             title="Sign Up"></Button>
             <Seperator text={"Or sign up with"}></Seperator>
            

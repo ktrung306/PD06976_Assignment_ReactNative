@@ -1,15 +1,15 @@
-import React from 'react';
-import {ScrollView, Text} from 'react-native';
-import {styles} from './styles';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import React from "react";
+import {createNativeStackNavigator} from "@react-navigation/native-stack"
+import AddCafe from "./addCafe";
+import ListCafe from "./listCafe";
 
 const Cart = () => {
-  return (
-    <SafeAreaView>
-      <ScrollView style={styles.container}>
-        <Text>Cart</Text>
-      </ScrollView>
-    </SafeAreaView>
+  const Stack = createNativeStackNavigator();
+  return(
+          <Stack.Navigator >
+              <Stack.Screen name="ListCafe" component={ListCafe} />
+              <Stack.Screen name="AddCafe" component={AddCafe} />
+          </Stack.Navigator>
   );
 };
 
