@@ -38,7 +38,7 @@ const Home = () => {
   return (
     <SafeAreaView>
       {/* <ScrollView style={styles.container}> */}
-      <Header showSearch onSearch={setKeyword} keyword={keyword} title="Find All You Need"
+      <Header showSearch onSearch={setKeyword} keyword={keyword} title="Giới thiệu sản phẩm"
       />
       <FlatList showsHorizontalScrollIndicator={false} style={styles.list}
         horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) => String(index)}

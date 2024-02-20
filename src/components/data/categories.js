@@ -1,37 +1,37 @@
 export const categories = [
     {
-      title: 'Popular',
+      title: 'Arabica',
       image:
-        'https://static8.depositphotos.com/1338574/831/i/600/depositphotos_8318731-stock-photo-gold-star.jpg',
+        'https://drive.gianhangvn.com/image/hat-ca-phe-culi-827587j12208.jpg',
     },
     {
       id: 1,
-      title: 'Chair',
+      title: 'Robusta',
       image:
-        'https://www.red-dot.org/fileadmin/bilder/Kategorien_PD/PD_cat_01.jpg',
+        'https://vuicoffee.com/wp-content/uploads/2019/11/cafe-hat-2.png',
     },
     {
       id: 2,
-      title: 'Table',
+      title: 'Culi',
       image:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9zWCkZ4tvzBmsxyMCY1sMOqxHdAPY6oSRP-vy4FBxH50h86Q-kstU8Qp7WSeTtsIuZ6Y&usqp=CAU',
+        'https://media.loveitopcdn.com/2360/hinh-dang-va-cau-tao-hat-ca-phe-nhan-robusta.jpg',
     },
     {
       id: 3,
-      title: 'Armchair',
+      title: 'Cherry',
       image:
-        'https://asset1.cxnmarksandspencer.com/is/image/mands/__T65_9889D_FS__EC_CHR_ELLI_0',
+        'https://lygiavien.com/cdn/shop/articles/kham-pha-cac-loai-hat-ca-phe-va-huong-vi-dac-trung-cua-chung_1024x1024.jpg?v=1680138605',
     },
     {
       id: 4,
-      title: 'Sofa',
+      title: 'Moka',
       image:
-        'https://www.urbanconcepts.ph/wp/wp-content/uploads/2017/08/4202-1.jpg',
+        'https://vinmec-prod.s3.amazonaws.com/images/20201221_012448_269257_hat-ca-phe-robusta-.max-1800x1800.jpg',
     },
     {
       id: 5,
       title: 'Bed',
       image:
-        'https://szyszkadesign.com/wp-content/uploads/2021/12/categorybeds-1-1200x1200-1.jpg',
+        'https://thesaigontimes.vn/wp-content/uploads/2022/07/Dungdequatre.jpeg.jpg',
     },
   ];

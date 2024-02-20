@@ -5,6 +5,7 @@ import SignIn from "./src/screens/auth/SignIn";
 import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
 import Profile from './src/screens/app/Profile';
+import Cart from "./src/screens/app/Cart";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -29,7 +30,11 @@ const Tabs = () => (
             icon = focused
               ? require('./src/assets/tabs/bookmark_active.png')
               : require('./src/assets/tabs/bookmark.png');
-          }
+          } else if (route.name === 'Cart') {
+            icon = focused
+              ? require('./src/assets/tabs/giohang.png')
+              : require('./src/assets/tabs/khunggiohang.png');
+          } 
   
           return <Image style={{width: 24, height: 24}} source={icon} />;
         },
@@ -39,7 +44,9 @@ const Tabs = () => (
       })}>
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Favorites" component={Favorites} />
+      <Tab.Screen name="Cart" component={Cart} />
       <Tab.Screen name="Profile" component={Profile} />
+      
     </Tab.Navigator>
   );
 const App = () => {

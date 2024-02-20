@@ -3,14 +3,14 @@ import {ScrollView, Text} from 'react-native';
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 
-const Settings = () => {
+const Cart = () => {
   return (
     <SafeAreaView>
       <ScrollView style={styles.container}>
-        <Text>Settins</Text>
+        <Text>Cart</Text>
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default React.memo(Settings);
+export default React.memo(Cart);

@@ -18,9 +18,9 @@ export const styles = StyleSheet.create({
         marginHorizontal: 10,
     },
     button:{
-        marginVertical: 10,
+        marginVertical: 20,
         width: 50,
-        height: 30,
+        height: 50,
     },
     footerText: {
         color: '#4F63AC',

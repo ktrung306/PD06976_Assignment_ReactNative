@@ -3,9 +3,7 @@ import { Text, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 
 const Button = ({title, onPress, style}) => {
-    const handlePress = () => {
-        console.log('Clicked');
-    };
+    
     return (
         <TouchableOpacity 
         activeOpacity="0.6"

@@ -1,47 +1,42 @@
 export const products = [
     {
       id: 1,
-      title: 'Loft Style Chair',
+      title: 'Cà phê Arabica',
       image:
-        'https://grandrapidschair.com/wp-content/uploads/2016/01/250_Brady_Graphite_Honey-1.jpg',
+        'https://mediamart.vn/images/uploads/data-2022/ghj-BOsK1B.jpg',
       category: 1,
-      price: '$ 20.00',
+      price: '$ 4.50',
     },
     {
       id: 2,
-      title: 'Wood Mini Table',
+      title: 'Cà phê Robusta',
       image:
-        'https://ii1.pepperfry.com/media/catalog/product/f/o/800x880/foldable-table-in-natural-colour-by-clasicraft-foldable-table-in-natural-colour-by-clasicraft-ahmtub.jpg',
+        'https://thuytinhnama.com/wp-content/uploads/2021/02/ly-uong-espresso.jpg',
       category: 2,
-      price: '$ 25.00',
+      price: '$ 4.10',
     },
     {
       id: 3,
-      title: 'Luxe Yellow Armchair',
+      title: 'Cà phê Culi',
       image:
-        'https://www.woods-furniture.co.uk/images/products/standard/7706_8118.jpg',
+        'https://websitecukcukvn.misacdn.net/wp-content/uploads/2022/12/hinh-anh-ly-cafe-dep.jpeg',
       category: 3,
-      price: '$ 45.00',
+      price: '$ 4.50',
     },
     {
       id: 4,
-      title: 'Cozy Armchair',
+      title: 'Cà phê Cherry',
       image:
-        'https://cdn.shopify.com/s/files/1/0079/2539/9616/products/myakka-chairs-jalkamal-block-print-footstool-28730051264703_2000x.jpg?v=1629217511',
+        'https://maylocnuocohido.com/wp-content/uploads/2017/07/nuoc-tinh-khiet-giu-lai-huong-vi-coffee.jpg',
       category: 3,
-      price: '$ 80.00',
+      price: '$ 4.20',
     },
     {
       id: 5,
-      title: 'Velvet Sofa',
+      title: 'Cà phê Moka',
       image:
-        'https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/5/5/555685b1a8eecf2133f18451526a4ede.jpg',
-      images: [
-        'https://collinsandhayes-cdn-1.s3.eu-west-2.amazonaws.com/wp-content/uploads/2022/02/14101256/V7A1199-800x800.jpg',
-        'https://www.housingunits.co.uk/media/catalog/product/cache/60968cec045f20fb06ab5f7720001507/5/5/555685b1a8eecf2133f18451526a4ede.jpg',
-        'https://media.sofa.com/thumbor/unsafe/https%3A%2F%2Fmedia.sofa.com%2Fmedias%2FSS22-Homepage-Category-Tiles-1-SOFAS.jpg%3Fcontext%3DbWFzdGVyfHJvb3R8MTM1MzYyfGltYWdlL2pwZWd8aDUyL2g0ZC84OTk4ODEwNTgzMDcwLmpwZ3xjNWUzZDYzMjY2NGNhNWJkYjUwNjg4MDlkNzBiZTFlYmNiNmE1YWEyNDEwMTFhYWRlYTI0OGMwZGVlZTE1OWE1',
-      ],
+        'https://xuconcept.com/wp-content/uploads/2020/12/anh-ly-ca-phe-dep-2.jpg',
       category: 4,
-      price: '$ 120.00',
+      price: '$ 3.30',
     },
   ];
