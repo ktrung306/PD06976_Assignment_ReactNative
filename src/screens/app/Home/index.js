@@ -6,28 +6,10 @@ import {categories} from '../../../components/data/categories';
 import CategoryBox from '../../../components/CategoryBox';
 import {products} from '../../../components/data/products';
 import ProductHomeItem from '../../../components/ProductHomeItem';
-import React, {useEffect, useState} from 'react';
-import {View, Text, FlatList} from 'react-native';
+import React, { useState} from 'react';
+import {View, FlatList} from 'react-native';
 const Home = () => {
-  const [keyword, setKeyword] = useState(false);
-  const [filteredProducts, setFilteredProduct] = useState(products);
-  const [selectedCategory, setSelectedCategory] = useState();
-  console.log('key', keyword);
-  // begin search
-  useEffect(() => {
-    if (selectedCategory && !keyword) {
-        const updatedProducts = products.filter((product) => product?.category === selectedCategory);
-        setFilteredProduct(updatedProducts);
-    } else if (selectedCategory && keyword) {
-        const updatedProducts = products.filter((product) => product?.category === selectedCategory && product?.title?.toLowerCase().includes(keyword?.toLowerCase()) );
-        setFilteredProduct(updatedProducts); 
-    } else if (!selectedCategory && keyword) {
-        const updatedProducts = products.filter((product) => product?.title?.toLowerCase().includes(keyword?.toLowerCase()) );
-        setFilteredProduct(updatedProducts); 
-    } else if (!keyword && !selectedCategory) {
-      setFilteredProduct(products);
-    }
-}, [selectedCategory, keyword])
+  const [filteredProducts] = useState(products);
   // end search
   const renderCategoryItem = ({item, index}) => {
     return <CategoryBox title={item?.title} image={item?.image}></CategoryBox>;
@@ -38,7 +20,7 @@ const Home = () => {
   return (
     <SafeAreaView>
       {/* <ScrollView style={styles.container}> */}
-      <Header showSearch onSearch={setKeyword} keyword={keyword} title="Giới thiệu sản phẩm"
+      <Header title="Giới thiệu sản phẩm"
       />
       <FlatList showsHorizontalScrollIndicator={false} style={styles.list}
         horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) => String(index)}

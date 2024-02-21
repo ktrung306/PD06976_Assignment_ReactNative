@@ -4,7 +4,7 @@ import SignUp from "./src/screens/auth/SignUp";
 import SignIn from "./src/screens/auth/SignIn";
 import Home from './src/screens/app/Home';
 import Favorites from './src/screens/app/Favorites';
-import Profile from './src/screens/app/Profile';
+import Profile from './src/screens/app/Logout';
 import Cart from "./src/screens/app/Cart";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";

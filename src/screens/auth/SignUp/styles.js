@@ -18,13 +18,11 @@ export const styles = StyleSheet.create({
         marginHorizontal: 10,
     },
     button:{
-        marginVertical: 20,
-        width: 50,
-        height: 50,
+        backgroundColor: '#FFA500',
     },
     footerText: {
         color: '#4F63AC',
-        marginBottom: 56,
+        marginTop: 20,
         textAlign: 'center',
     },
     footerLink: {

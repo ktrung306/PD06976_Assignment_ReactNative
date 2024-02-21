@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Button, Text, View } from "react-native"
+import { Text, View } from "react-native"
 import AuthHeader from "../../../components/AuthHeader";
 import Input from "../../../components/Input";
 import { styles } from "./styles";
 import Checkbox from "../../../components/Checkbox";
 import Seperator from "../../../components/Seperator";
 import GoogleLogin from "../../../components/GoogleLogin";
+import Button from "../../../components/Button";
 
 const SignIn =({navigation}) => {
     const onSignUp = () => {
@@ -22,14 +23,14 @@ const SignIn =({navigation}) => {
             <Input label="Email" placeholder="example@gmail.com"/>
             <Input isPassword label="Password" placeholder="*******"/>
             </View>
-            <Button 
+            <Button
             onPress={() => navigation.navigate('Tabs')}
             style={styles.button} 
             title="Sign In"></Button>
-            <Seperator text="Or sign up with"></Seperator>
+            <Seperator text="Chào mừng bạn đến SignIn"></Seperator>
             <GoogleLogin></GoogleLogin>
             <Text style={styles.footerText}>
-                Don't have an account?
+                Bạn chưa có tài khoản?
                 <Text onPress={onSignUp} style={styles.footerLink}>
                     {' '}
                     Sign Up
