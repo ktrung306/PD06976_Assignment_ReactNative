@@ -29,8 +29,6 @@ const SignIn = ({ navigation }) => {
 
     const handleSignIn = () => {
         if (validateInputs()) {
-            // Perform sign in logic here
-            // If successful sign in, navigate to Tabs screen
             navigation.navigate('Tabs');
         }
     };
