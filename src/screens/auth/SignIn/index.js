@@ -1,32 +1,52 @@
 import React, { useState } from "react";
-import { Text, View } from "react-native"
+import { Text, View, Alert } from "react-native";
 import AuthHeader from "../../../components/AuthHeader";
 import Input from "../../../components/Input";
 import { styles } from "./styles";
-import Checkbox from "../../../components/Checkbox";
-import Seperator from "../../../components/Seperator";
 import GoogleLogin from "../../../components/GoogleLogin";
 import Button from "../../../components/Button";
+import Seperator from "../../../components/Seperator";
 
-const SignIn =({navigation}) => {
+const SignIn = ({ navigation }) => {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
     const onSignUp = () => {
         navigation.navigate('SignUp');
     };
 
     const onBack = () => {
         navigation.goBack();
-    }
+    };
+
+    const validateInputs = () => {
+        if (email === "" || password === "") {
+            Alert.alert("Lỗi", "Chưa nhập đầy đủ thông tin");
+            return false;
+        }
+        return true;
+    };
+
+    const handleSignIn = () => {
+        if (validateInputs()) {
+            // Perform sign in logic here
+            // If successful sign in, navigate to Tabs screen
+            navigation.navigate('Tabs');
+        }
+    };
+
     return (
         <View style={styles.container}>
             <AuthHeader onBackPress={onBack} title="Sign In"/>
             <View style={styles.input}>
-            <Input label="Email" placeholder="example@gmail.com"/>
-            <Input isPassword label="Password" placeholder="*******"/>
+                <Input label="Email" placeholder="example@gmail.com" email={email} onChangeText={setEmail}/>
+                <Input isPassword label="Password" placeholder="*******" password={password} onChangeText={setPassword}/>
             </View>
             <Button
-            onPress={() => navigation.navigate('Tabs')}
-            style={styles.button} 
-            title="Sign In"></Button>
+                onPress={handleSignIn}
+                style={styles.button} 
+                title="Sign In"
+            />
             <Seperator text="Chào mừng bạn đến SignIn"></Seperator>
             <GoogleLogin></GoogleLogin>
             <Text style={styles.footerText}>

@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
     },
     footerText: {
         color: '#4F63AC',
-        marginTop: 20,
+        marginTop: -30,
         textAlign: 'center',
     },
     footerLink: {
