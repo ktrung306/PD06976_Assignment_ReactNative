@@ -1,13 +1,14 @@
 
 import {styles} from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Header from '../../../components/Header';
-import {categories} from '../../../components/data/categories';
-import CategoryBox from '../../../components/CategoryBox';
-import {products} from '../../../components/data/products';
-import ProductHomeItem from '../../../components/ProductHomeItem';
 import React, { useState} from 'react';
 import {View, FlatList} from 'react-native';
+import Header from '../../../components/Header';
+import {categories} from '../../../components/data/categories';
+import {products} from '../../../components/data/products';
+import CategoryBox from '../../../components/CategoryBox';
+import ProductHomeItem from '../../../components/ProductHomeItem';
+
 const Home = () => {
   const [filteredProducts] = useState(products);
   // end search
@@ -19,16 +20,16 @@ const Home = () => {
   };
   return (
     <SafeAreaView>
-      {/* <ScrollView style={styles.container}> */}
-      <Header title="Giới thiệu sản phẩm"
-      />
+      <Header title="Giới thiệu sản phẩm"/>
       <FlatList showsHorizontalScrollIndicator={false} style={styles.list}
-        horizontal data={categories} renderItem={renderCategoryItem} keyExtractor={(item, index) => String(index)}
+        horizontal data={categories} renderItem={renderCategoryItem} 
+        keyExtractor={(item, index) => String(index)}
       />
       <FlatList
-        style={styles.productsList} numColumns={2}  data={filteredProducts} renderItem={renderProductItem} keyExtractor={item => String(item.id)} ListFooterComponent={<View style={{height: 200}} />}
+        style={styles.productsList} numColumns={2}  data={filteredProducts} 
+        renderItem={renderProductItem} keyExtractor={item => String(item.id)} 
+        ListFooterComponent={<View style={{height: 200}} />}
       />
-      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };

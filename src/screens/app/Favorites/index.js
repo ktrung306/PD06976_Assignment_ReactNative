@@ -1,7 +1,6 @@
 import React from 'react';
-import { ScrollView, Text } from 'react-native';
+import { Text } from 'react-native';
 import { styles } from './styles';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Image, ImageBackground, StatusBar, TouchableOpacity, View } from 'react-native';
 function Favorites() {
   return (
@@ -31,10 +30,10 @@ function Favorites() {
         </TouchableOpacity>
       </View>
 
-      {/* Thêm icon trái tim */}
+      {/* Thêm icon hạt nhân */}
       <Image source={require('../../../assets/hatnhan.png')} style={styles.heartIcon} />
     </View>
   );
 };
 
-export default Favorites;
+export default React.memo(Favorites);
