@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
         paddingVertical: 12,
         paddingHorizontal: 16,
         marginHorizontal: 4,
-        backgroundColor:'blue',
+        backgroundColor:'#808080',
         marginBottom: 12,
         marginTop: 12,
     },
@@ -44,7 +44,6 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     button: {
-        backgroundColor: 'blue',
         paddingVertical: 10,
         paddingHorizontal: 15,
         marginHorizontal: 4,
@@ -77,7 +76,7 @@ buttonGroup:{
     justifyContent: 'center',
 },
 button:{
-    backgroundColor: 'blue',
+    backgroundColor: '#FF6347',
     padding: 8,
     borderRadius: 4,
     marginLeft: 8

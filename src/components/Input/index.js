@@ -3,8 +3,10 @@ import { Image, Pressable, Text, TextInput, View } from "react-native";
 import { styles } from "./styles";
 
 const Input = ({label, placeholder, isPassword, value, onChangeText}) => {
+    //email và password để lưu trữ giá trị của ô nhập liệu
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
+    //thay đổi giá trị của isPasswordVisible từ false sang true
     const onEyePress = () => {
         setIsPasswordVisible(!isPasswordVisible);
     };

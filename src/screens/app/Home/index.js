@@ -8,17 +8,24 @@ import {categories} from '../../../components/data/categories';
 import {products} from '../../../components/data/products';
 import CategoryBox from '../../../components/CategoryBox';
 import ProductHomeItem from '../../../components/ProductHomeItem';
-
+//Là giao diện trang chủ 
 const Home = () => {
+  //useState để quản lý trạng thái của các sản phẩm
+  //filteredProducts là trạng thái hiện tại
   const [filteredProducts] = useState(products);
-  // end search
+  /* renderCategoryItem là một hàm được sử dụng để render 
+  hiển thị sản phẩm (CategoryBox) thông qua mảng categories.*/
   const renderCategoryItem = ({item, index}) => {
     return <CategoryBox title={item?.title} image={item?.image}></CategoryBox>;
   };
+  /*renderProductItem là một hàm được sử dụng để render 
+  hiển thị sản phẩm (ProductHomeItem) thông qua mảng filteredProducts.*/
   const renderProductItem = ({item}) => {
     return <ProductHomeItem {...item} />;
   };
   return (
+    //FlatList Hiển thị ds sản phẩm hàng ngang 
+    //FlatList Hiển thị ds sản phẩm một lưới với 2 cột.
     <SafeAreaView>
       <Header title="Giới thiệu sản phẩm"/>
       <FlatList showsHorizontalScrollIndicator={false} style={styles.list}

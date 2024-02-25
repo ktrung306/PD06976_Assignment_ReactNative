@@ -7,21 +7,25 @@ import Checkbox from "../../../components/Checkbox";
 import Seperator from "../../../components/Seperator";
 import GoogleLogin from "../../../components/GoogleLogin";
 import Button from "../../../components/Button";
-
+//khởi tạo SignUp
+//navigation, dùng để điều hướng
 const SignUp = ({ navigation }) => {
+    //email và password để lưu trữ giá trị của ô nhập liệu
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [checked, setChecked] = useState(false);
 
+    //Chuyển hướng sang màn hình đăng ký
     const onSignIn = () => {
         navigation.navigate('SignIn');
     };
 
+    //Quay lại màn hình trước đó
     const onBack = () => {
         navigation.goBack();
     };
-
+    //Kiểm tra xem các ô nhập liệu đã được điền đầy đủ thông tin chưa
     const validateInputs = () => {
         if (name === "" || email === "" || password === "") {
             Alert.alert("Lỗi", "Chưa nhập đầy đủ thông tin");
@@ -29,7 +33,7 @@ const SignUp = ({ navigation }) => {
         }
         return true;
     };
-
+    //Xử lý đăng kí sau khi kiểm tra và xác nhận các ô nhập liệu
     const handleSignUp = () => {
         if (validateInputs()) {
             navigation.navigate('SignIn');

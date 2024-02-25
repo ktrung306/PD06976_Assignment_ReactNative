@@ -3,16 +3,23 @@ import { useState } from "react";
 import { styles } from "./styles";
 
 const AddCafe = () =>{
+    /* khai báo bằng cách sử dụng useState 
+     được khởi tạo với giá trị ban đầu là chuỗi rỗng */
 const [name, setName] = useState('');
 const [birthday, setBirthday] = useState('');
 
+//saveData là một hàm để gửi dữ liệu người dùng mới lên server
+
 const saveData = async() =>{
+    //biến url chứa địa chỉ URL của endpoint server
     const url = 'http://10.0.2.2:3000/users';
+    //fetch để gửi một yêu cầu POST tới url
     let result = await fetch(url, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body:JSON.stringify({name, birthday}),
     });
+    //phản hồi từ server chuyển định dạng JSON
     result = await result.json();
     if(result) {
         console.log("Add success");

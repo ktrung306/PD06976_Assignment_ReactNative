@@ -6,19 +6,22 @@ import { styles } from "./styles";
 import GoogleLogin from "../../../components/GoogleLogin";
 import Button from "../../../components/Button";
 import Seperator from "../../../components/Seperator";
-
+//khởi tạo SignIn 
+//navigation, dùng để điều hướng
 const SignIn = ({ navigation }) => {
+    //email và password để lưu trữ giá trị của ô nhập liệu
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    //Chuyển hướng sang màn hình đăng ký
     const onSignUp = () => {
         navigation.navigate('SignUp');
     };
-
+    //Quay lại màn hình trước đó
     const onBack = () => {
         navigation.goBack();
     };
-
+    //Kiểm tra xem các ô nhập liệu đã được điền đầy đủ thông tin chưa
     const validateInputs = () => {
         if (email === "" || password === "") {
             Alert.alert("Lỗi", "Chưa nhập đầy đủ thông tin");
@@ -26,7 +29,7 @@ const SignIn = ({ navigation }) => {
         }
         return true;
     };
-
+    //Xử lý đăng nhập sau khi kiểm tra và xác nhận các ô nhập liệu
     const handleSignIn = () => {
         if (validateInputs()) {
             navigation.navigate('Tabs');
