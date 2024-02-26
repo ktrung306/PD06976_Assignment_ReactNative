@@ -6,8 +6,8 @@ import { styles } from "./styles";
 import GoogleLogin from "../../../components/GoogleLogin";
 import Button from "../../../components/Button";
 import Seperator from "../../../components/Seperator";
-//khởi tạo SignIn 
-//navigation, dùng để điều hướng
+//khởi giao diện màn hình SigIn
+//navigation dùng để điều hướng
 const SignIn = ({ navigation }) => {
     //email và password để lưu trữ giá trị của ô nhập liệu
     const [email, setEmail] = useState("");

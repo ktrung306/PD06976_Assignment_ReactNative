@@ -4,7 +4,6 @@ import {styles} from './styles';
 
 const ProductHomeItem = ({title, price, image, onPress}) => {
   return (
-    //Pressable được sử dụng để tạo một vùng nhấn
     //onPress được thiết lập để gọi hàm được truyền vào qua props.
     <Pressable onPress={onPress} style={styles.container}>
       <Image style={styles.image} source={{uri: image}} />

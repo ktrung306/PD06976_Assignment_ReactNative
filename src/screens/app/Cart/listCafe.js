@@ -58,6 +58,7 @@ const ListCafe = ({ navigation }) => {
               <Text style={styles.birthday}>{item.birthday}</Text>
             </View>
             <View style={styles.containerButton}>
+              
               <TouchableOpacity style={styles.button}>
                 <Text
                   style={styles.buttonText}

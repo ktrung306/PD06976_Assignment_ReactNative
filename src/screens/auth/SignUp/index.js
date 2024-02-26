@@ -7,8 +7,8 @@ import Checkbox from "../../../components/Checkbox";
 import Seperator from "../../../components/Seperator";
 import GoogleLogin from "../../../components/GoogleLogin";
 import Button from "../../../components/Button";
-//khởi tạo SignUp
-//navigation, dùng để điều hướng
+//khởi giao diện màn hình SignUp
+//navigation dùng để điều hướng
 const SignUp = ({ navigation }) => {
     //email và password để lưu trữ giá trị của ô nhập liệu
     const [name, setName] = useState("");

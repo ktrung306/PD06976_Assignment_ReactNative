@@ -10,12 +10,14 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Image} from 'react-native';
-
+//createNativeStackNavigator() để quản lý điều hướng giữa các màn hình
 const Stack = createNativeStackNavigator();
+//createBottomTabNavigator() để tạo các tab điều hướng dưới cùng của ứng dụng
 const Tab = createBottomTabNavigator();
 const Tabs = () => (
     <Tab.Navigator
       screenOptions={({route}) => ({
+        // hiển thị icon
         tabBarIcon: ({focused}) => {
           let icon;
           if (route.name === 'Home') {
@@ -51,7 +53,10 @@ const Tabs = () => (
   );
 const App = () => {
     return (
-        <NavigationContainer>
+      //NavigationContainer: Bao bọc toàn bộ ứng dụng để cung cấp điều hướng cho các màn hình
+      //Stack.Navigator quản lý việc chuyển đổi giữa các màn hình
+      //Stack.Screen màn hình và liên kết chúng với các component
+      <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen name ="Home" component={Splash} />
               <Stack.Screen name="SignIn" component={SignIn} options={{headerShown:false}} />

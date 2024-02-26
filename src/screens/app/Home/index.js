@@ -10,15 +10,14 @@ import CategoryBox from '../../../components/CategoryBox';
 import ProductHomeItem from '../../../components/ProductHomeItem';
 //Là giao diện trang chủ 
 const Home = () => {
-  //useState để quản lý trạng thái của các sản phẩm
   //filteredProducts là trạng thái hiện tại
   const [filteredProducts] = useState(products);
-  /* renderCategoryItem là một hàm được sử dụng để render 
+  /* renderCategoryItem là một hàm được sử dụng để
   hiển thị sản phẩm (CategoryBox) thông qua mảng categories.*/
-  const renderCategoryItem = ({item, index}) => {
+  const renderCategoryItem = ({item}) => {
     return <CategoryBox title={item?.title} image={item?.image}></CategoryBox>;
   };
-  /*renderProductItem là một hàm được sử dụng để render 
+  /*renderProductItem là một hàm được sử dụng 
   hiển thị sản phẩm (ProductHomeItem) thông qua mảng filteredProducts.*/
   const renderProductItem = ({item}) => {
     return <ProductHomeItem {...item} />;
